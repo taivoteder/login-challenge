@@ -1,0 +1,12 @@
+<div fxLayout="row">
+  <mat-toolbar [color]="'primary'" class="app-header">
+    <span>My Awesome Website</span>
+    <span class="spacer"></span>
+    <button type="button" mat-button *ngIf="!currentUser">Sisene</button>
+<!--    <button type="button" mat-flat-button color="accent" *ngIf="!currentUser">Registreeri</button>-->
+    <span *ngIf="currentUser" >{{currentUser.name}}</span>
+    <button type="button" mat-flat-button *ngIf="currentUser" (click)="logout()">Logi välja</button>
+  </mat-toolbar>
+
+</div>
+

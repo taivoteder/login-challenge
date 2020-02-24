@@ -1,0 +1,26 @@
+<div class="first-page-container">
+  <div class="login-form" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card>
+      <mat-card-title>Logi sisse</mat-card-title>
+      <mat-card-content>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form" novalidate autocomplete="off">
+          <mat-form-field>
+            <mat-label>Kasutajatunnus</mat-label>
+            <input id="username" type="text" matInput formControlName="username">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Salasõna</mat-label>
+            <input [type]="hide ? 'password' : 'text'" id="password" matInput formControlName="password">
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <button type="submit" mat-flat-button color="accent">Sisene</button>
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

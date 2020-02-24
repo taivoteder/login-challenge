@@ -1,0 +1,14 @@
+.login-form {
+  height: 100%;
+  /*"margin: 0 auto; height: 100%; width: 500px*/
+}
+
+.first-page-container {
+  background-image: url("../../assets/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  height: 100%;
+}
